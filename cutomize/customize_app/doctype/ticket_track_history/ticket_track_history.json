@@ -1,22 +1,25 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
- "creation": "2023-08-26 13:03:48.206139",
+ "autoname": "format:{date}-{####}",
+ "creation": "2023-08-29 09:52:52.459898",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "ticket_name",
-  "colunm_1",
+  "column_break_6re3o",
+  "custom_serial_number",
+  "column_break_wn6f2",
   "from_date",
-  "column_break_4",
+  "column_break_id2ae",
   "to_date",
-  "column_break_5",
-  "column_break_2",
-  "column_break_8",
-  "section_break_3",
-  "show_html"
+  "column_break_xplhu",
+  "column_break_j5qpp",
+  "child_ticket",
+  "date"
  ],
  "fields": [
   {
@@ -26,7 +29,16 @@
    "options": "Issue"
   },
   {
-   "fieldname": "colunm_1",
+   "fieldname": "column_break_6re3o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "column_break_wn6f2",
    "fieldtype": "Column Break"
   },
   {
@@ -35,7 +47,7 @@
    "label": "From Date"
   },
   {
-   "fieldname": "column_break_4",
+   "fieldname": "column_break_id2ae",
    "fieldtype": "Column Break"
   },
   {
@@ -44,32 +56,33 @@
    "label": "To Date"
   },
   {
-   "fieldname": "column_break_5",
+   "fieldname": "column_break_xplhu",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_2",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_8",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_3",
+   "fieldname": "column_break_j5qpp",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "show_html",
-   "fieldtype": "HTML"
+   "fieldname": "child_ticket",
+   "fieldtype": "Table",
+   "options": "Child Ticket History"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-26 13:03:48.206139",
+ "modified": "2023-08-29 11:17:01.355112",
  "modified_by": "Administrator",
  "module": "Customize App",
  "name": "Ticket Track History",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -85,9 +98,7 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }
